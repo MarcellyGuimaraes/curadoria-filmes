@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../../assets/images/logo-viva-decora.png'
 
 const Header = () => {
@@ -8,7 +9,7 @@ const Header = () => {
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 ml-3 text-sm text-white md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
@@ -28,9 +29,9 @@ const Header = () => {
           </svg>
         </button>
 
-        <a href="https://flowbite.com/" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img src={logo} className="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-        </a>
+        </Link>
 
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul
@@ -39,8 +40,8 @@ const Header = () => {
           md:border-0 dark:border-gray-700"
           >
             <li>
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="block py-2 pl-3 pr-4 text-white rounded 
                 hover:bg-gray-100 md:hover:bg-transparent md:border-0 
                 md:p-0 dark:text-gray-400 md:dark:hover:text-white 
@@ -48,11 +49,11 @@ const Header = () => {
                 md:dark:hover:bg-transparent"
               >
                 Filmes não curados
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/curtidos"
                 className="block py-2 pl-3 pr-4 text-white rounded 
                 hover:bg-gray-100 md:hover:bg-transparent md:border-0 
                 md:p-0 dark:text-gray-400 md:dark:hover:text-white 
@@ -60,11 +61,11 @@ const Header = () => {
                 md:dark:hover:bg-transparent"
               >
                 Filmes curtidos
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/nao_curtidos"
                 className="block py-2 pl-3 pr-4 text-white rounded 
                 hover:bg-gray-100 md:hover:bg-transparent md:border-0 
                 md:p-0 dark:text-gray-400 md:dark:hover:text-white 
@@ -72,7 +73,7 @@ const Header = () => {
                 md:dark:hover:bg-transparent"
               >
                 Filmes não curtidos
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

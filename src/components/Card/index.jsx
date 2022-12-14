@@ -2,7 +2,7 @@ import React from 'react'
 
 function Card({ titulo, descricao, imagem, categoria, classificacao }) {
   return (
-    <div className="relative m-2 w-fit cursor-pointer self-center overflow-hidden shadow-lg">
+    <div className="relative m-2 w-fit self-center overflow-hidden shadow-lg">
       <img
         className="h-96 w-full object-cover"
         src={imagem}
