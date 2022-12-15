@@ -15,6 +15,7 @@ const NaoCurtidos = ({ movie }) => {
         {movie?.map((m) => (
           <Card
             key={m?.id}
+            media_type={movie?.media_type}
             id={m?.id}
             titulo={m?.title}
             descricao={m?.overview}

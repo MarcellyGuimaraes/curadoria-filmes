@@ -16,6 +16,7 @@ const Curtidos = ({ movie }) => {
         {movie?.map((m) => (
           <Card
             id={m?.id}
+            media_type={movie?.media_type}
             key={m?.id}
             titulo={m?.title || m?.name}
             descricao={m?.overview}
