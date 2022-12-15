@@ -3,8 +3,8 @@ import Card from '../../components/Card'
 
 const NaoCurtidos = ({ movie }) => {
   return (
-    <div className="container my-12 mx-auto px-4 md:px-12">
-      <p className="text-lg font-bold text-gray-200 text-center">
+    <div className="container h-screen my-12 mx-auto px-4 md:px-12">
+      <p className="text-lg font-bold text-gray-200 mb-9 text-center">
         FILMES NÃO CURTIDOS
       </p>
       <div className="flex flex-wrap -mx-1 lg:-mx-4">
