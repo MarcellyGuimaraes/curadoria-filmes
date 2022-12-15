@@ -37,7 +37,12 @@ const Modal = ({ show, onClose, movie_id, type }) => {
                   {filme?.overview}
                   <br />
 
-                  <span>Data de lançamento: {filme?.release_date}</span>
+                  <span>
+                    Data de lançamento:{' '}
+                    {filme.release_date
+                      ? filme.release_date
+                      : 'Sem informações'}
+                  </span>
                   <br />
                   {filme?.genres.map((genre) => (
                     <span
