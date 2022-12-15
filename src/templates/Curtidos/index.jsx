@@ -8,6 +8,7 @@ const Curtidos = ({ movie }) => {
       <div className="flex flex-wrap -mx-1 lg:-mx-4">
         {movie?.map((m) => (
           <Card
+            id={m?.id}
             key={m?.id}
             titulo={m?.title}
             descricao={m?.overview}

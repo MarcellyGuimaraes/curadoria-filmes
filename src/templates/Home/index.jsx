@@ -10,6 +10,7 @@ function Home({ movie, handleClickCenter, handleClickRight, handleClickLeft }) {
           <>
             <Card
               key={movie?.id}
+              id={movie?.id}
               titulo={movie?.title}
               descricao={movie?.overview}
               imagem={`https://image.tmdb.org/t/p/w500/${movie?.backdrop_path}`}

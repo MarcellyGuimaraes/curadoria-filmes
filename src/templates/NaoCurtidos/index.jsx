@@ -9,6 +9,7 @@ const NaoCurtidos = ({ movie }) => {
         {movie?.map((m) => (
           <Card
             key={m?.id}
+            id={m?.id}
             titulo={m?.title}
             descricao={m?.overview}
             imagem={`https://image.tmdb.org/t/p/w500/${m?.backdrop_path}`}
