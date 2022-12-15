@@ -7,34 +7,32 @@ function Card({ titulo, descricao, imagem, id, self_center }) {
 
   return (
     <div
-      className={`my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 ${
+      className={`my-1 w-full flex justify-center md:w-1/2 lg:my-4 lg:w-1/3 lg:px-4 ${
         self_center ? ' self-center' : ''
       }`}
     >
-      <a href="#">
-        <img alt="Placeholder" className="block h-auto w-full" src={imagem} />
-      </a>
-      <article className="bg-white overflow-hidden shadow-lg">
-        <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-          <h1 className="text-lg">
-            <a className="no-underline hover:underline text-black" href="#">
-              {titulo}
-            </a>
-          </h1>
-          <p className="text-grey-darker text-sm">11/1/19</p>
-        </header>
-        <p className="max-h-[5ch] mx-5 overflow-hidden">{descricao}</p>
-        <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-          <button
-            onClick={() => {
-              setShow(true)
-              setModal(modal)
-            }}
-          >
-            Ver mais
-          </button>
-        </footer>
-      </article>
+      <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+        <img className="w-full" src={imagem} alt={titulo} />
+        <div className="px-6 py-4">
+          <div className="font-bold text-xl mb-2">{titulo}</div>
+          <p className="text-gray-700 text-base max-h-[5ch] mx-5 overflow-hidden">
+            {descricao}
+          </p>
+          <span>{'...'}</span>
+        </div>
+        <div className="px-6 pt-4 pb-2">
+          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+            <button
+              onClick={() => {
+                setShow(true)
+                setModal(modal)
+              }}
+            >
+              Ver mais
+            </button>
+          </span>
+        </div>
+      </div>
 
       <Modal show={show} movie_id={id} onClose={() => setShow(false)} />
     </div>

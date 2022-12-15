@@ -36,11 +36,14 @@ const Modal = ({ show, onClose, movie_id }) => {
                   <br />
                   <span>Data de lançamento: {filme.release_date}</span>
                   <br />
-                  <span>
-                    {filme.genres.map((genre) => (
-                      <span key={genre.name}>{genre.name}; </span>
-                    ))}
-                  </span>
+                  {filme.genres.map((genre) => (
+                    <span
+                      key={genre.name}
+                      class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                    >
+                      {genre.name}
+                    </span>
+                  ))}
                 </p>
                 <div className="items-center gap-2 mt-3 sm:flex">
                   <button

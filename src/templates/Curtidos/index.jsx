@@ -4,7 +4,9 @@ import Card from '../../components/Card'
 const Curtidos = ({ movie }) => {
   return (
     <div className="container my-12 mx-auto px-4 md:px-12">
-      FILMES NÃO CURTIDOS
+      <p className="text-lg font-bold text-gray-200 text-center">
+        FILMES NÃO CURTIDOS
+      </p>
       <div className="flex flex-wrap -mx-1 lg:-mx-4">
         {movie?.map((m) => (
           <Card

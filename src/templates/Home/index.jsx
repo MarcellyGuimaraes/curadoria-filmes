@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import { DislikedIcon, LikedIcon } from '../../components/Icons'
 
 function Home({ movie, handleClickCenter, handleClickRight, handleClickLeft }) {
+  const textClass =
+    'm-3 flex font-semibold rounded-full bg-white px-5 py-5 text-center lg:px-10 lg:py-5'
+
   return (
     <div className="h-screen text-center flex flex-col pt-20">
       <div className="flex flex-col">
@@ -18,23 +21,14 @@ function Home({ movie, handleClickCenter, handleClickRight, handleClickLeft }) {
               self_center
             />
             <div className="flex justify-center">
-              <button
-                onClick={handleClickRight}
-                className="m-3 flex rounded-full bg-white px-5 py-5 text-center lg:px-10 lg:py-5"
-              >
+              <button onClick={handleClickRight} className={textClass}>
                 <DislikedIcon />
                 <span className="ml-2 hidden lg:block">Não curti! :(</span>
               </button>
-              <button
-                onClick={handleClickCenter}
-                className="m-3 rounded-full bg-white px-5 py-5 text-center lg:px-10 lg:py-5"
-              >
+              <button onClick={handleClickCenter} className={textClass}>
                 PULAR
               </button>
-              <button
-                onClick={handleClickLeft}
-                className="m-3 rounded-full flex bg-white px-5 py-5 text-center lg:px-10 lg:py-5"
-              >
+              <button onClick={handleClickLeft} className={textClass}>
                 <LikedIcon />
                 <span className="ml-2 hidden lg:block">Curti! :D</span>
               </button>
