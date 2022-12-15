@@ -2,8 +2,13 @@ import React from 'react'
 import Card from '../../components/Card'
 
 const Curtidos = ({ movie }) => {
+  console.log(movie.length)
   return (
-    <div className="container my-12 h-fit mx-auto px-4 md:px-12">
+    <div
+      className={`container ${
+        movie.length > 6 ? ' h-fit ' : ' h-screen '
+      } mx-auto px-4 md:px-12`}
+    >
       <p className="text-lg font-bold text-gray-200 mb-9 text-center">
         FILMES CURTIDOS
       </p>

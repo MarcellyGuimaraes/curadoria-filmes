@@ -3,7 +3,11 @@ import Card from '../../components/Card'
 
 const NaoCurtidos = ({ movie }) => {
   return (
-    <div className="container h-screen my-12 mx-auto px-4 md:px-12">
+    <div
+      className={`container ${
+        movie.length > 6 ? ' h-fit ' : ' h-screen '
+      } mx-auto px-4 md:px-12`}
+    >
       <p className="text-lg font-bold text-gray-200 mb-9 text-center">
         FILMES NÃO CURTIDOS
       </p>
