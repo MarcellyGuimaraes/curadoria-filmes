@@ -7,7 +7,7 @@ function Home({ movie, handleClickCenter, handleClickRight, handleClickLeft }) {
     'm-3 flex font-semibold rounded-full bg-white px-5 py-5 text-center lg:px-10 lg:py-5'
 
   return (
-    <div className="h-screen text-center flex flex-col pt-20">
+    <div className="h-[88.9vh] text-center flex flex-col pt-20">
       <div className="flex flex-col">
         {movie ? (
           <>
