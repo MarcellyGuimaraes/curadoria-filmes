@@ -17,7 +17,7 @@ const NaoCurtidos = ({ movie }) => {
             key={m?.id}
             media_type={m?.media_type}
             id={m?.id}
-            titulo={m?.title}
+            titulo={m?.title || m?.name}
             descricao={m?.overview}
             imagem={`https://image.tmdb.org/t/p/w500/${m?.backdrop_path}`}
             categoria={m?.media_type}
