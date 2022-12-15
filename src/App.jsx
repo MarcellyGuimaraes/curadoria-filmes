@@ -9,7 +9,7 @@ import Header from './components/Header'
 
 function App() {
   const baseUrlApi =
-    'https://api.themoviedb.org/3/trending/movie/day?api_key=25a54fb078f05780554c0c17f94855eb&language=pt-BR'
+    'https://api.themoviedb.org/3/trending/all/day?api_key=25a54fb078f05780554c0c17f94855eb&language=pt-BR'
   const [filmes, setFilmes] = useState(null)
   const [number, setNumber] = useState(0)
   const [likedFilm, setLikedFilm] = useState([])

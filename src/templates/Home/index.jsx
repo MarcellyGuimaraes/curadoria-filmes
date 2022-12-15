@@ -7,14 +7,15 @@ function Home({ movie, handleClickCenter, handleClickRight, handleClickLeft }) {
     'm-3 flex font-semibold rounded-full bg-white px-5 py-5 text-center lg:px-10 lg:py-5'
 
   return (
-    <div className="h-[88.9vh] text-center flex flex-col pt-20">
+    <div className="h-fit text-center flex flex-col pt-20">
       <div className="flex flex-col">
         {movie ? (
           <>
             <Card
               key={movie?.id}
+              media_type={movie?.media_type}
               id={movie?.id}
-              titulo={movie?.title}
+              titulo={movie?.title || movie?.name}
               descricao={movie?.overview}
               imagem={`https://image.tmdb.org/t/p/w500/${movie?.backdrop_path}`}
               categoria={movie?.media_type}

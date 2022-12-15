@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Modal from '../Modal'
 
-function Card({ titulo, descricao, imagem, id, self_center }) {
+function Card({ titulo, descricao, imagem, id, self_center, media_type }) {
   const [show, setShow] = useState(false)
   const [modal, setModal] = useState()
 
@@ -34,7 +34,12 @@ function Card({ titulo, descricao, imagem, id, self_center }) {
         </div>
       </div>
 
-      <Modal show={show} movie_id={id} onClose={() => setShow(false)} />
+      <Modal
+        show={show}
+        movie_id={id}
+        type={media_type}
+        onClose={() => setShow(false)}
+      />
     </div>
   )
 }
