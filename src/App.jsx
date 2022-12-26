@@ -39,7 +39,7 @@ function App() {
   }
 
   return (
-    <div className={`h-fit bg-opacity-90 bg-red-500`}>
+    <div className={`h-fit bg-red-600`}>
       <Router>
         <Header />
         <Routes>
